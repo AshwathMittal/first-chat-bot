@@ -1,35 +1,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>
-      function talk() {
-          var user = document.getElementById("userBox").value;
-      console.log(user)
-      document.getElementById("userBox").value = "";
-          document.getElementById("chatLog").innerHTML += '<div class="client-chat">'+user+"<br></div>";
-      var age = parseInt(user);
-          if (age < 18) {
-              document.getElementById("chatLog").innerHTML += '<div class="my-chat">' + "you are not eligible. :("+"<br></div>";
-          } 
-      else if(age >=18){
-      document.getElementById("chatLog").innerHTML += '<div class="my-chat">' + "You are eleigible."+"<br></div>";
-      
-         }else if(age <= 0){
-      document.getElementById("chatLog").innerHTML += '<div class="my-chat">' + "Enter the correct age."+"<br></div>";
-      
-      }else{
-      document.getElementById("chatLog").innerHTML += '<div class="my-chat">Enter a number...<br></div>';
-          }
-      } 
-      
-      function load(){
-      document.getElementById("chatLog").innerHTML += '<div class="my-chat">Enter your age to check if you are eligible to drive or not...<br></div>';
-      }
-      function rm(){
-      var element = document.getElementByClass("myDIV");
-         element.classList.add("ddd");
-      }
-    </script>
+		  <title>Chat Bot</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
       * {
@@ -265,6 +237,35 @@
         }
       }
               
+    </script>
+	    <script>
+      function talk() {
+          var user = document.getElementById("userBox").value;
+      console.log(user)
+      document.getElementById("userBox").value = "";
+          document.getElementById("chatLog").innerHTML += '<div class="client-chat">'+user+"<br></div>";
+      var age = parseInt(user);
+          if (age <= 0) {
+              document.getElementById("chatLog").innerHTML += '<div class="my-chat">' +"Enter the correct age."+"<br></div>";
+          } 
+      else if(age >=18){
+      document.getElementById("chatLog").innerHTML += '<div class="my-chat">' + "You are eleigible."+"<br></div>";
+      
+         }else if(age <= 18){
+      document.getElementById("chatLog").innerHTML += '<div class="my-chat">' + "you are not eligible. :("+"<br></div>";
+      
+      }else{
+      document.getElementById("chatLog").innerHTML += '<div class="my-chat">Enter a number...<br></div>';
+          }
+      } 
+      
+      function load(){
+      document.getElementById("chatLog").innerHTML += '<div class="my-chat">Enter your age to check if you are eligible to drive or not...<br></div>';
+      }
+      function rm(){
+      var element = document.getElementByClass("myDIV");
+         element.classList.add("ddd");
+      }
     </script>
   </body>
 </html>
