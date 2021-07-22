@@ -245,27 +245,11 @@
     </script>
 	    <script>
       function talk() {
-          var user = document.getElementById("userBox").value;
-      console.log(user)
-      document.getElementById("userBox").value = "";
-          document.getElementById("chatLog").innerHTML += '<div class="client-chat">'+user+"<br></div>";
-      var age = parseInt(user);
-          if (age <= 0) {
-              document.getElementById("chatLog").innerHTML += '<div class="my-chat">' +"Enter the correct age."+"<br></div>";
-          } 
-      else if(age >=18){
-      document.getElementById("chatLog").innerHTML += '<div class="my-chat">' + "You are eleigible."+"<br></div>";
-      
-         }else if(age <= 18){
-      document.getElementById("chatLog").innerHTML += '<div class="my-chat">' + "you are not eligible. :("+"<br></div>";
-      
-      }else{
-      document.getElementById("chatLog").innerHTML += '<div class="my-chat">Enter a number...<br></div>';
-          }
-      } 
-      
-      function load(){
-      document.getElementById("chatLog").innerHTML += '<div class="my-chat">Enter your age to check if you are eligible to drive or not...<br></div>';
+	      var user = document.getElementById("userBox").value;
+	      console.log(user)
+	      document.getElementById("userBox").value = "";
+	      document.getElementById("chatLog").innerHTML += '<div class="client-chat">'+user+"<br></div>";
+	      document.getElementById("chatLog").innerHTML += '<div class="my-chat">Hello!..<br></div>';
       }
       function rm(){
       var element = document.getElementByClass("myDIV");
